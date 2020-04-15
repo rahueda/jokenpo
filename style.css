@@ -34,3 +34,31 @@ button {
     justify-content: center;
     align-content: center;
 }
+
+@media only screen and (max-width: 600px) { 
+    body { 
+        width: 100% 
+    } 
+        
+    h1 { 
+        font-size: 3rem; 
+    } 
+    
+    .p1 { 
+        font-size: 1em; 
+    } 
+        
+    .p2 { 
+        font-size: 2em; 
+    } 
+    
+    img { 
+        width: 100% 
+    } 
+    
+    #btns { 
+        justify-content: center; 
+        display: grid; grid-column-gap: 1%; 
+        grid-template-columns: repeat(3, 33%); 
+        background-color: white; } 
+    }

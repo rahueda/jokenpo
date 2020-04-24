@@ -21,12 +21,14 @@ function playRound(playerSelection, computerSelection) {
     const c = computerSelection
     
     if (p === c) {
-        p1.textContent = `DRAW!`
+        p1.textContent = `DRAW!`;
+
     } else if ( (p == 'rock' && c == 'scissors')  || 
                 (p == 'paper') && (c == 'rock') ||
                 (p == 'scissors') && c == ('paper')) {
                     pOne += 1
                     p1.textContent = `You WON, ${p} beats ${c}`;
+                    
     } else if ( (p == 'rock' && c == 'paper')  || 
                 (p == 'paper') && (c == 'scissors') ||
                 (p == 'scissors') && c == ('rock')) {
@@ -41,12 +43,14 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     if(pOne == 5) {
         p1.textContent = 'GAME WON';
+        p1.style.fontSize = '3rem'
         p1.style.color = 'blue';
         p2.style.color = 'blue';
     resetButton()
 
     } else if (pTwo == 5) {
         p1.textContent = 'GAME LOST';
+        p1.style.fontSize = '3rem'
         p1.style.color = 'red';
         p2.style.color = 'red';
     resetButton()
@@ -65,4 +69,3 @@ function resetButton() {
             document.location.reload()
         });
 }
-
